@@ -1,0 +1,28 @@
+﻿@model ImagemModel
+
+
+<form method="post" asp-action="RemoveImage" asp-controller="Home" enctype="multipart/form-data" class="text-center mb-5">
+    <div class="input-group d-flex flex-column w-100">
+
+        <h2>Deseja remover a imagem abaixo?</h2>
+
+        <input type="hidden" asp-for="Id" />
+
+        <div class="card" style="width: 10rem; margin-left: 20px; margin-bottom: 20px; padding:10px">
+            <img src="/imagem/@Model.CaminhoImagem" class="card-img-top" style="width: 140px; height:140px" id="img" />
+        </div>
+
+        <label class="text-start">
+            Nome:
+        </label>
+
+        <input type="text" class="mb-3" style="border: 1px solid gray; border-radius: 5px; height:40px" asp-for="Nome" disabled />
+        <input type="file" class="mb-3" name="foto" asp-for="CaminhoImagem" id="imageFile" type="hidden" disabled />
+
+        <div>
+            <button class="btn btn-danger w-100 mb-2" type="submit">Remover Imagem</button>
+            <a class="btn btn-info w-100" type="submit" asp-action="Index" asp-controller="Home">Voltar</a>
+        </div>
+
+    </div>
+</form>
