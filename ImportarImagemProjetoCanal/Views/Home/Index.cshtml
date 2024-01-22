@@ -24,7 +24,7 @@
             {
                 @foreach(var imagem in Model)
                 {
-                    <div class="card" style="width: 15rem; margin-left: 20px; margin-bottom: 20px; padding:10px">
+                    <div class="card" style="width: 10rem; margin-left: 20px; margin-bottom: 20px; padding:10px">
                            <img src="/imagem/@imagem.CaminhoImagem" class="card-img-top" style="width: 140px; height:140px"/>
                            <a class="btn btn-warning w-100 mt-3" asp-action="EditImage" asp-controller="Home" asp-route-id="@imagem.Id">Editar</a>
                         <a class="btn btn-danger w-100 mt-3" asp-action="RemoveImage" asp-controller="Home" asp-route-id="@imagem.Id">Remover</a>
